@@ -3,7 +3,7 @@ use code_context::app::{generate, models::RuntimeConfig};
 use std::path::Path;
 
 /// Scans the directory using the existing `code_context` dependency.
-/// ‼️ Error Handling (Req #2): Uses anyhow context for better error messages.
+
 pub fn scan_repository(path: &Path) -> Result<String> {
     eprintln!("🔍 Scanning directory for README context: {:?}", path);
 

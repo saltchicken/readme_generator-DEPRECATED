@@ -1,5 +1,5 @@
 /// Generates the final prompt string.
-/// ‼️ Refactoring Strategy (Req #7): Broken down into helper functions.
+
 pub fn generate_readme_prompt(
     description: &str,
     style: &str,
@@ -46,7 +46,7 @@ fn build_context_section(repo_context: &str) -> String {
         return String::new();
     }
 
-    // ‼️ Wraps the scanned code in XML blocks for the LLM to process clearly
+
     format!(
         "## 3. SOURCE CODE CONTEXT\n\
         The following is the actual file structure and content of the project. \
@@ -58,7 +58,7 @@ fn build_context_section(repo_context: &str) -> String {
     )
 }
 
-// ‼️ Updated this function to include the specific HTML/Textarea output rules
+
 fn build_requirements_section() -> String {
     r#"## 4. OUTPUT REQUIREMENTS
     Please generate a single `README.md` file code block. Ensure the following sections are included (if applicable based on the code):

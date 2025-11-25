@@ -9,7 +9,7 @@ use scanner::scan_repository;
 use std::io::{self, Read};
 
 /// Main application entry point.
-/// ‼️ Orchestrates the flow of data between modules.
+
 pub fn run() -> Result<()> {
     let args = parse_args();
 
@@ -17,7 +17,7 @@ pub fn run() -> Result<()> {
     let project_description = resolve_description(args.description, args.stdin)?;
 
     // 2. Scan Context (if path provided)
-    // ‼️ Leverages code_context to get actual file contents for the LLM to read
+
     let repo_context = if let Some(path) = args.scan {
         scan_repository(&path)?
     } else {
@@ -39,7 +39,7 @@ pub fn run() -> Result<()> {
 }
 
 /// Helper to handle stdin vs argument logic
-/// ‼️ Refactoring Strategy (Req #7): Extracted logic for cleanliness.
+
 fn resolve_description(desc_arg: Option<String>, use_stdin: bool) -> Result<String> {
     if use_stdin {
         let mut buffer = String::new();
