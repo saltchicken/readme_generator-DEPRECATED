@@ -1,0 +1,10 @@
+[package]
+name = "readme_generator"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# ‼️ Added missing dependencies to fix E0432/E0433
+anyhow = "1.0"
+clap = { version = "4.5", features = ["derive"] }
+code_context = { git = "https://github.com/saltchicken/code_context.git", rev = "118fb973baed53bd9816052ed9dbdad90739db5b" }
