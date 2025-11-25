@@ -1,6 +1,8 @@
 # README Generator
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Rust](https://img.shields.io/badge/rust-1.75%2B-orange.svg) ![Status](https://img.shields.io/badge/status-active-red)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Rust](https://img.shields.io/badge/rust-1.75%2B-orange.svg) ![Status](https://img.shields.io/badge/status-deprecated-red)
+
+**Please use https://github.com/saltchicken/architect
 
 **README Generator** is a Rust-based CLI tool designed to streamline the documentation process for developers. By intelligently scanning your project's directory structure and source code, it constructs comprehensive, context-aware prompts specifically engineered for Large Language Models (LLMs). These prompts enable LLMs to generate high-quality, production-ready `README.md` files with minimal manual effort.
 
